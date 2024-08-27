@@ -1,0 +1,40 @@
+/* Animations for text */
+.left-text,
+.right-text {
+    position: absolute;
+    white-space: nowrap;
+    opacity: 0;
+    font-size: 24px;
+}
+
+.left-text {
+    top: 25%;
+    left: -100%;
+    color: rgb(255, 255, 255);
+    animation: slideInFromLeft 2s ease-in-out 0.5s forwards;
+}
+
+.left-text h2, .left-text h4 {
+    margin: 0;
+}
+
+.right-text {
+    top: 50%;
+    right: -100%;
+    color: rgb(39, 38, 48);
+    animation: slideInFromRight 2s ease-in-out 1s forwards;
+}
+
+@keyframes slideInFromLeft {
+    to {
+        left: 10%;
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    to {
+        right: 10%;
+        opacity: 1;
+    }
+}

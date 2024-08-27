@@ -1,0 +1,180 @@
+body,html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: rgb(39, 38, 48); */
+    background-image: url(../Image/BG-B.jpg);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none; /* เอา underline ออก */
+    color: inherit; /* ใช้สีเดียวกับสีข้อความทั่วไป */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    /* จัดแนวให้อยู่ตรงกลางในแนวตั้ง */
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.logo-text {
+    font-size: 18px;
+    color: white;
+    margin-left: 10px;
+    /* เว้นระยะห่างจากโลโก้ */
+    opacity: 0;
+    animation: fadeInText 2s forwards;
+    animation-delay: 2s;
+    /* ให้ข้อความใต้โลโก้เริ่มแสดงหลังจากโลโก้ปรากฏแล้ว */
+}
+
+.black-triangle {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(207, 207, 207);
+    clip-path: polygon(100% 0, 100% 120%, 0 80%);
+    position: absolute;
+    transform: translateX(100vw);
+    animation: slideIn 2s forwards;
+}
+
+.left-text,
+.right-text {
+    position: absolute;
+    white-space: nowrap;
+    opacity: 0;
+    font-size: 24px;
+}
+
+.left-text {
+    top: 25%;
+    left: -100%;
+    color: rgb(255, 255, 255);
+    animation: slideInFromLeft 2s ease-in-out 0.5s forwards;
+}
+
+.left-text h2,.left-text h4 {
+    margin: 0;
+    /* ลบการเว้นวรรคบนและล่างของข้อความ */
+}
+
+.right-text {
+    top: 50%;
+    right: -100%;
+    color: rgb(39, 38, 48);
+    animation: slideInFromRight 2s ease-in-out 1s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+        /* ขยับข้อความออกไปทางซ้ายเล็กน้อย */
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+        /* ขยับกลับมายังตำแหน่งเดิม */
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100vw);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromLeft {
+    to {
+        left: 10%;
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    to {
+        right: 10%;
+        opacity: 1;
+    }
+}
+
+.continue-button {
+    font-size: 24px;
+    padding: 15px 30px;
+    border: 2px solid rgb(39, 38, 48);
+    color: rgb(39, 38, 48);
+    background-color: transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-out, color 0.3s ease-out;
+}
+
+.continue-button:hover {
+    background-color: rgb(39, 38, 48);
+    color: white;
+}
+
+.bouncing-text {
+    font-size: 36px;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: -2px;
+    color: white;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-30px);
+    }
+
+    60% {
+        transform: translateY(-15px);
+    }
+}

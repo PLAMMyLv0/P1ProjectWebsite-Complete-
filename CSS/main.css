@@ -1,0 +1,174 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none; 
+    color: inherit; 
+}
+
+/* โลโก้และพื้นหลัง */
+.logo-container {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.logo-text {
+    font-size: 18px;
+    color: white;
+    margin-left: 10px;
+    opacity: 0;
+    animation: fadeInText 2s forwards;
+    animation-delay: 2s;
+}
+
+.black-triangle {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(207, 207, 207);
+    clip-path: polygon(100% 0, 100% 120%, 0 80%);
+    position: absolute;
+    transform: translateX(100vw);
+    animation: slideIn 2s forwards;
+}
+
+/* เนื้อหา */
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 90vw; /* กำหนดความกว้างสูงสุดของกล่อง */
+    max-height: 90vh; /* กำหนดความสูงสูงสุดของกล่อง */
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow-y: auto; /* ทำให้กล่องข้อความเลื่อนลงได้ */
+    width: auto; /* เพิ่มความกว้างของกล่อง */
+    position: fixed; /* ทำให้กล่องติดอยู่ที่ตำแหน่งที่กำหนด */
+    top: 2; /* ตั้งค่าตำแหน่งด้านบน */
+    left: 0; /* ตั้งค่าตำแหน่งด้านซ้าย */
+    margin: 50px; /* เพิ่มระยะห่างจากขอบของหน้าจอ */
+    box-sizing: border-box; /* ทำให้ padding รวมอยู่ในความกว้างและความสูงของกล่อง */
+}
+
+/*แ*/
+.content-right {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 900vw; /* กำหนดความกว้างสูงสุดของกล่อง */
+    max-height: 90vh; /* กำหนดความสูงสูงสุดของกล่อง */
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow-y: auto; /* ทำให้กล่องข้อความเลื่อนลงได้ */
+    width: auto; /* เพิ่มความกว้างของกล่อง */
+    position: fixed; /* ทำให้กล่องติดอยู่ที่ตำแหน่งที่กำหนด */
+    top: 2; /* ตั้งค่าตำแหน่งด้านบน */
+    right: 0; /* ตั้งค่าตำแหน่งด้านซ้าย */
+    margin: 50px; /* เพิ่มระยะห่างจากขอบของหน้าจอ */
+    box-sizing: border-box; /* ทำให้ padding รวมอยู่ในความกว้างและความสูงของกล่อง */
+}
+
+
+/* เพิ่มความกว้างให้กับกล่องข้อความ */
+.content-box {
+    background: white;
+    border-radius: 24px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    max-width: 900vw;
+    max-height: 90vh;
+    width: auto; /* ขยายความกว้างให้มากกว่าความกว้างของ container */
+    box-sizing: border-box;
+    position: relative;
+}
+
+
+
+/* ส่วนของบทเรียน */
+.lesson-container {
+    margin: 20px 0;
+}
+
+.lesson-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.lesson-card h3 {
+    margin-top: 0;
+}
+
+.continue-button {
+    font-size: 16px;
+    padding: 10px 20px;
+    border: 2px solid rgb(39, 38, 48);
+    color: rgb(39, 38, 48);
+    background-color: transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-out, color 0.3s ease-out;
+}
+
+.continue-button:hover {
+    background-color: rgb(39, 38, 48);
+    color: white;
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100vw);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
