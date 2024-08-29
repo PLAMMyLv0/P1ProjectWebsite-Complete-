@@ -188,12 +188,22 @@ function loadQuiz() {
     });
 }
 
+function decodeHtml(html) {
+    const txt = document.createElement('textarea');
+    txt.innerHTML = html;
+    return txt.value;
+}
+
 function calculateResult() {
     let score = 0;
     quizData.forEach((quiz, index) => {
         const selectedOption = document.querySelector(`input[name="question${index}"]:checked`);
-        if (selectedOption && selectedOption.value === quiz.answer) {
-            score++;
+        if (selectedOption) {
+            const selectedAnswer = decodeHtml(selectedOption.value);
+            const correctAnswer = decodeHtml(quiz.answer);
+            if (selectedAnswer === correctAnswer) {
+                score++;
+            }
         }
     });
     resultContainer.innerHTML = `คะแนนของคุณ: ${score}/${quizData.length}`;
@@ -203,6 +213,7 @@ document.getElementById('submit').addEventListener('click', calculateResult);
 
 // โหลดคำถามเมื่อเริ่มต้น
 loadQuiz();
+
 
 // const quizContainer = document.getElementById('quiz');
 // const resultContainer = document.getElementById('result');

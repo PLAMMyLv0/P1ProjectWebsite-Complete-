@@ -75,23 +75,24 @@ a {
     box-sizing: border-box; /* ทำให้ padding รวมอยู่ในความกว้างและความสูงของกล่อง */
 }
 
-/*แ*/
+/**/
 .content-right {
     display: flex;
+    flex-direction: column; /* เรียงองค์ประกอบในแนวตั้ง */
     justify-content: space-between;
     padding: 20px;
-    max-width: 900vw; /* กำหนดความกว้างสูงสุดของกล่อง */
-    max-height: 90vh; /* กำหนดความสูงสูงสุดของกล่อง */
+    max-width: 900px; /* แก้ไขขนาดให้เหมาะสม */
+    max-height: 90vh;
     background: rgba(255, 255, 255, 0.8);
     border-radius: 16px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    overflow-y: auto; /* ทำให้กล่องข้อความเลื่อนลงได้ */
-    width: auto; /* เพิ่มความกว้างของกล่อง */
-    position: fixed; /* ทำให้กล่องติดอยู่ที่ตำแหน่งที่กำหนด */
-    top: 2; /* ตั้งค่าตำแหน่งด้านบน */
-    right: 0; /* ตั้งค่าตำแหน่งด้านซ้าย */
-    margin: 50px; /* เพิ่มระยะห่างจากขอบของหน้าจอ */
-    box-sizing: border-box; /* ทำให้ padding รวมอยู่ในความกว้างและความสูงของกล่อง */
+    overflow-y: auto;
+    width: auto;
+    position: fixed;
+    top: 2; /* น่าจะต้องระบุหน่วย เช่น px */
+    right: 0;
+    margin: 50px;
+    box-sizing: border-box;
 }
 
 
@@ -122,6 +123,18 @@ a {
     padding: 20px;
     margin-bottom: 20px;
 }
+
+.lesson-card-right {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    flex-grow: 1; /* ทำให้กล่องขยายเต็มพื้นที่ที่เหลือ */
+    width: 100%; /* ขยายเต็มความกว้างของคอนเทนเนอร์ */
+    box-sizing: border-box;
+}
+
 
 .lesson-card h3 {
     margin-top: 0;
