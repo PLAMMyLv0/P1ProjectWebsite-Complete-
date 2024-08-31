@@ -303,6 +303,16 @@ body.popup-active::before {
     padding: 20px; /* เพิ่ม padding เพื่อให้มีพื้นที่รอบๆ */
 }
 
+.quiz-item {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: block; /* ตรวจสอบให้แน่ใจว่าแสดง */
+    visibility: visible; /* ตรวจสอบให้แน่ใจว่าไม่ซ่อน */
+}
 
 #submit {
     position: absolute; /* ใช้ absolute เพื่อให้สามารถกำหนดตำแหน่งแบบอิสระได้ */

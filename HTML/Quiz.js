@@ -195,7 +195,6 @@ function loadQuiz() {
 }
 
 
-
 // ฟังก์ชันการถอดรหัส HTML
 function decodeHtml(html) {
     const txt = document.createElement('textarea');
@@ -224,6 +223,9 @@ function calculateResult() {
     openPopup(`คะแนนของคุณ: ${score}/${quizData.length}`);
 }
 
+// โหลดคำถามเมื่อเริ่มต้น
+loadQuiz();
+
 // ฟังก์ชันเปิด Popup
 function openPopup(message) {
     popupResult.textContent = message;
@@ -237,6 +239,3 @@ function closePopup() {
 
 // กำหนดอีเวนต์ให้ปุ่ม submit
 document.getElementById('submit').addEventListener('click', calculateResult);
-
-// โหลดคำถามเมื่อเริ่มต้น
-loadQuiz();
