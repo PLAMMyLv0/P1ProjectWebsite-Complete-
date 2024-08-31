@@ -171,6 +171,8 @@ const quizData = (function() {
 
 const quizContainer = document.getElementById('quiz');
 const resultContainer = document.getElementById('result');
+const popup = document.getElementById('popup');
+const popupResult = document.getElementById('popup-result');
 
 function loadQuiz() {
     quizContainer.innerHTML = ''; // เคลียร์คำถามเก่า
@@ -206,7 +208,14 @@ function calculateResult() {
             }
         }
     });
-    resultContainer.innerHTML = `คะแนนของคุณ: ${score}/${quizData.length}`;
+
+    // แสดงคะแนนใน Popup
+    popupResult.textContent = `คะแนนของคุณ: ${score}/${quizData.length}`;
+    popup.style.display = 'block';
+}
+
+function closePopup() {
+    popup.style.display = 'none';
 }
 
 document.getElementById('submit').addEventListener('click', calculateResult);
