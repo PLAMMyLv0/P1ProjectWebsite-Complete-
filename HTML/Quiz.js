@@ -178,8 +178,10 @@ const popupResult = document.getElementById('popup-result');
 
 // ฟังก์ชันการโหลดคำถาม
 function loadQuiz() {
+    console.log("Loading quiz...");
     quizContainer.innerHTML = ''; // เคลียร์คำถามเก่า
     quizData.forEach((quiz, index) => {
+        console.log(`Loading question ${index}`);
         const questionElement = document.createElement('div');
         questionElement.classList.add('quiz-item');
         questionElement.innerHTML = `
@@ -193,11 +195,14 @@ function loadQuiz() {
     });
 }
 
+
 // ฟังก์ชันการถอดรหัส HTML
 function decodeHtml(html) {
     const txt = document.createElement('textarea');
     txt.innerHTML = html;
-    return txt.value;
+    const decoded = txt.value;
+    console.log(`Decoded HTML: ${decoded}`);
+    return decoded;
 }
 
 // ฟังก์ชันการคำนวณคะแนน
