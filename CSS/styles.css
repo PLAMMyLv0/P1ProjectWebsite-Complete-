@@ -319,6 +319,7 @@ body.popup-active::before {
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease-out, color 0.3s ease-out;
+    z-index: 1000;
 }
 
 #submit:hover {

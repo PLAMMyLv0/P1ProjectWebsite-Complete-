@@ -71,11 +71,118 @@
         </div>
     </div>
     <script>
-        document.getElementById('change-content-btn').addEventListener('click', function() {
-            window.location.href = 'LearnJAVASCRIPT.html';
-        });
-    </script>
-    <script src="Quiz.js"></script>
-</body>
+        // ข้อมูลคำถาม JavaScript
+        const JavaScriptQuizData = [
+    {
+        question: "คำถาม 1: ใน JavaScript, ฟังก์ชัน `typeof` ใช้เพื่ออะไร?",
+        options: ["ตรวจสอบชนิดของค่าที่อยู่ในตัวแปร", "เปลี่ยนประเภทของตัวแปร", "ลบตัวแปรออกจากหน่วยความจำ", "สร้างฟังก์ชันใหม่"],
+        answer: "ตรวจสอบชนิดของค่าที่อยู่ในตัวแปร"
+    },
+    {
+        question: "คำถาม 2: เมธอด `Array.prototype.filter` ทำงานอย่างไร?",
+        options: ["คัดกรองค่าในอาเรย์ตามฟังก์ชันที่ให้และสร้างอาเรย์ใหม่ที่ประกอบด้วยค่าที่ตรงตามเงื่อนไข","แปลงค่าในอาเรย์เป็นอาเรย์ใหม่ตามฟังก์ชันที่ให้","รวมค่าทั้งหมดในอาเรย์เป็นค่าหนึ่งตามฟังก์ชันที่ให้","ลบค่าจากอาเรย์ตามฟังก์ชันที่ให้"],
+        answer: "คัดกรองค่าในอาเรย์ตามฟังก์ชันที่ให้และสร้างอาเรย์ใหม่ที่ประกอบด้วยค่าที่ตรงตามเงื่อนไข"
+    },
+    {
+        question: "คำถาม 3: ฟังก์ชัน `parseInt` ใช้สำหรับการอะไร?",
+        options: ["แปลงสตริงเป็นจำนวนเต็ม", "แปลงจำนวนเต็มเป็นสตริง", "ตรวจสอบประเภทของค่าที่เป็นจำนวน", "แปลงจำนวนทศนิยมเป็นจำนวนเต็ม"],
+        answer: "แปลงสตริงเป็นจำนวนเต็ม"
+    },
+    {
+        question: "คำถาม 4: การสร้างฟังก์ชันใน JavaScript ทำได้อย่างไร?",
+        options: ["function name() { }", "function: name() { }", "create function name() { }", "function name: { }"],
+        answer: "function name() { }"
+    },
+    {
+        question: "คำถาม 5: ฟังก์ชัน `console.log` ใช้เพื่ออะไร?",
+        options: ["แสดงข้อมูลในคอนโซลของเบราว์เซอร์", "เปลี่ยนข้อความที่แสดงบนหน้าเว็บ", "ส่งข้อมูลไปยังเซิร์ฟเวอร์", "บันทึกข้อมูลลงในไฟล์"],
+        answer: "แสดงข้อมูลในคอนโซลของเบราว์เซอร์"
+    },
+    {
+        question: "คำถาม 6: เมธอด `Array.prototype.map` ทำงานอย่างไร?",
+        options: ["สร้างอาเรย์ใหม่โดยการแปลงค่าในอาเรย์เดิมตามฟังก์ชันที่ให้", "กรองค่าในอาเรย์ตามฟังก์ชันที่ให้", "รวมค่าทั้งหมดในอาเรย์เป็นค่าหนึ่งตามฟังก์ชันที่ให้", "เรียงลำดับค่าในอาเรย์ตามฟังก์ชันที่ให้"],
+        answer: "สร้างอาเรย์ใหม่โดยการแปลงค่าในอาเรย์เดิมตามฟังก์ชันที่ให้"
+    },
+    {
+        question: "คำถาม 7: การสร้างอ็อบเจกต์ใน JavaScript ทำได้อย่างไร?",
+        options: ["const obj = {};","const obj = new Object();","const obj = create Object();","const obj = object();"],
+        answer: "const obj = {}; "
+    },
+    {
+        question: "คำถาม 8: การใช้ `let` ต่างจาก `var` อย่างไร?",
+        options: ["`let` มีขอบเขตบล็อก (block scope) ในขณะที่ `var` มีขอบเขตฟังก์ชัน (function scope)", "`let` ใช้สำหรับการประกาศค่าคงที่", "`var` สามารถใช้ในบล็อก (block) ได้เช่นเดียวกับ `let`", "`var` ถูกแนะนำให้ใช้แทน `let`"],
+        answer: "`let` มีขอบเขตบล็อก (block scope) ในขณะที่ `var` มีขอบเขตฟังก์ชัน (function scope)"
+    },
+    {
+        question: "คำถาม 9: ฟังก์ชัน `setTimeout` ใช้สำหรับอะไร?",
+        options: ["ตั้งเวลาที่จะทำงานฟังก์ชันหลังจากช่วงเวลาที่กำหนด", "กำหนดเวลาหมดอายุของตัวแปร", "เปลี่ยนเวลาของระบบ", "หน่วงเวลาการเรียกใช้งานฟังก์ชัน"],
+        answer: "ตั้งเวลาที่จะทำงานฟังก์ชันหลังจากช่วงเวลาที่กำหนด"
+    },
+    {
+        question: "คำถาม 10: การใช้ `async` และ `await` ใน JavaScript ใช้เพื่ออะไร?",
+        options: ["จัดการกับฟังก์ชันที่ทำงานแบบอะซิงโครนัส (asynchronous)", "ทำให้ฟังก์ชันทำงานเร็วขึ้น", "สร้างฟังก์ชันใหม่ที่สามารถรอการทำงานแบบซิงโครนัส (synchronous)", "ทำให้โค้ดทำงานแบบซิงโครนัส"],
+        answer: "จัดการกับฟังก์ชันที่ทำงานแบบอะซิงโครนัส (asynchronous)"
+    }
+];
 
+        const quizContainer = document.getElementById('quiz');
+        const resultContainer = document.getElementById('result');
+        const popup = document.getElementById('popup');
+        const popupResult = document.getElementById('popup-result');
+
+        function loadQuiz() {
+            quizContainer.innerHTML = ''; // เคลียร์เนื้อหาเก่า
+            JavaScriptQuizData.forEach((quiz, index) => {
+                const questionElement = document.createElement('div');
+                questionElement.classList.add('quiz-item');
+                questionElement.innerHTML = `
+                    <h3>${quiz.question}</h3>
+                    ${quiz.options.map((option, i) => `
+                        <input type="radio" name="question${index}" id="q${index}o${i}" value="${option}">
+                        <label for="q${index}o${i}">${option}</label><br>
+                    `).join('')}
+                `;
+                quizContainer.appendChild(questionElement);
+            });
+        }
+
+        function decodeHtml(html) {
+            const txt = document.createElement('textarea');
+            txt.innerHTML = html;
+            return txt.value;
+        }
+
+        function calculateResult() {
+            let score = 0;
+            JavaScriptQuizData.forEach((quiz, index) => {
+                const selectedOption = document.querySelector(`input[name="question${index}"]:checked`);
+                if (selectedOption) {
+                    const selectedAnswer = decodeHtml(selectedOption.value);
+                    const correctAnswer = decodeHtml(quiz.answer);
+                    if (selectedAnswer === correctAnswer) {
+                        score++;
+                    }
+                }
+            });
+            openPopup(`คะแนนของคุณ: ${score}/${JavaScriptQuizData.length}`);
+        }
+
+        function openPopup(message) {
+            popupResult.textContent = message;
+            popup.style.display = 'block';
+        }
+
+        function closePopup() {
+            popup.style.display = 'none';
+        }
+
+        document.getElementById('submit').addEventListener('click', calculateResult);
+        document.getElementById('change-content-btn').addEventListener('click', function() {
+            window.location.href = 'LearnJavaScript.html';
+        });
+
+        // โหลดคำถามเมื่อเริ่มต้น
+        loadQuiz();
+    </script>
+</body>
 </html>
