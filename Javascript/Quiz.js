@@ -1,3 +1,4 @@
+// ชุดข้อมูลคำถามสำหรับ HTML, CSS, และ JavaScript
 const HtmlQuizData = [
     {
         question: "คำถามที่ 1: การเริ่มต้นเอกสาร HTML ต้องใช้แท็กอะไร?",
@@ -117,43 +118,43 @@ const JavaScriptQuizData = [
     },
     {
         question: "คำถาม 3: ฟังก์ชัน `parseInt` ใช้สำหรับการอะไร?",
-        options: ["แปลงข้อความเป็นจำนวนเต็ม", "แปลงจำนวนเต็มเป็นข้อความ", "ตรวจสอบว่าข้อความเป็นจำนวนเต็มหรือไม่", "แปลงตัวเลขเป็นฟังก์ชัน"],
-        answer: "แปลงข้อความเป็นจำนวนเต็ม"
+        options: ["แปลงสตริงเป็นจำนวนเต็ม", "แปลงจำนวนเต็มเป็นสตริง", "ตรวจสอบประเภทของค่าที่เป็นจำนวน", "แปลงจำนวนทศนิยมเป็นจำนวนเต็ม"],
+        answer: "แปลงสตริงเป็นจำนวนเต็ม"
     },
     {
-        question: "คำถาม 4: เมธอด `Array.prototype.forEach` ทำงานอย่างไร?",
-        options: ["เรียกใช้ฟังก์ชันที่ให้กับทุกค่าของอาเรย์แต่ไม่สร้างอาเรย์ใหม่","แปลงค่าในอาเรย์เป็นอาเรย์ใหม่ตามฟังก์ชันที่ให้","รวมค่าทั้งหมดในอาเรย์เป็นค่าหนึ่งตามฟังก์ชันที่ให้","คัดกรองค่าในอาเรย์ตามฟังก์ชันที่ให้และสร้างอาเรย์ใหม่ที่ประกอบด้วยค่าที่ตรงตามเงื่อนไข"],
-        answer: "เรียกใช้ฟังก์ชันที่ให้กับทุกค่าของอาเรย์แต่ไม่สร้างอาเรย์ใหม่"
+        question: "คำถาม 4: การสร้างฟังก์ชันใน JavaScript ทำได้อย่างไร?",
+        options: ["function name() { }", "function: name() { }", "create function name() { }", "function name: { }"],
+        answer: "function name() { }"
     },
     {
-        question: "คำถาม 5: `let` และ `var` แตกต่างกันอย่างไรใน JavaScript?",
-        options: ["let มีขอบเขตบล็อก, var มีขอบเขตฟังก์ชัน", "var ใช้สำหรับค่าคงที่, let ใช้สำหรับตัวแปรที่เปลี่ยนแปลงได้", "let สามารถประกาศตัวแปรหลายตัวในบรรทัดเดียวกันได้, var ไม่ได้", "ไม่มีความแตกต่าง"],
-        answer: "let มีขอบเขตบล็อก, var มีขอบเขตฟังก์ชัน"
+        question: "คำถาม 5: ฟังก์ชัน `console.log` ใช้เพื่ออะไร?",
+        options: ["แสดงข้อมูลในคอนโซลของเบราว์เซอร์", "เปลี่ยนข้อความที่แสดงบนหน้าเว็บ", "ส่งข้อมูลไปยังเซิร์ฟเวอร์", "บันทึกข้อมูลลงในไฟล์"],
+        answer: "แสดงข้อมูลในคอนโซลของเบราว์เซอร์"
     },
     {
-        question: "คำถาม 6: เมธอด `Array.prototype.reduce` ทำงานอย่างไร?",
-        options: ["รวมค่าทั้งหมดในอาเรย์เป็นค่าหนึ่งตามฟังก์ชันที่ให้","กรองค่าในอาเรย์ตามฟังก์ชันที่ให้","แปลงค่าในอาเรย์เป็นอาเรย์ใหม่ตามฟังก์ชันที่ให้","ค้นหาค่าที่ตรงตามเงื่อนไขในอาเรย์"],
-        answer: "รวมค่าทั้งหมดในอาเรย์เป็นค่าหนึ่งตามฟังก์ชันที่ให้"
+        question: "คำถาม 6: เมธอด `Array.prototype.map` ทำงานอย่างไร?",
+        options: ["สร้างอาเรย์ใหม่โดยการแปลงค่าในอาเรย์เดิมตามฟังก์ชันที่ให้", "กรองค่าในอาเรย์ตามฟังก์ชันที่ให้", "รวมค่าทั้งหมดในอาเรย์เป็นค่าหนึ่งตามฟังก์ชันที่ให้", "เรียงลำดับค่าในอาเรย์ตามฟังก์ชันที่ให้"],
+        answer: "สร้างอาเรย์ใหม่โดยการแปลงค่าในอาเรย์เดิมตามฟังก์ชันที่ให้"
     },
     {
-        question: "คำถาม 7: เมธอด `Array.prototype.map` ทำงานอย่างไร?",
-        options: ["แปลงค่าในอาเรย์เป็นอาเรย์ใหม่ตามฟังก์ชันที่ให้", "ลบค่าจากอาเรย์ตามฟังก์ชันที่ให้", "หาผลรวมของค่าทั้งหมดในอาเรย์", "คัดลอกอาเรย์เป็นอาเรย์ใหม่"],
-        answer: "แปลงค่าในอาเรย์เป็นอาเรย์ใหม่ตามฟังก์ชันที่ให้"
+        question: "คำถาม 7: การสร้างอ็อบเจกต์ใน JavaScript ทำได้อย่างไร?",
+        options: ["const obj = {};","const obj = new Object();","const obj = create Object();","const obj = object();"],
+        answer: "const obj = {}; "
     },
     {
-        question: "คำถาม 8: `null` และ `undefined` ต่างกันอย่างไร?",
-        options: ["null เป็นการกำหนดค่าที่เป็น 'ไม่มีค่า', undefined หมายถึง 'ไม่กำหนดค่า'", "null หมายถึง 'ไม่กำหนดค่า', undefined เป็นการกำหนดค่าที่เป็น 'ไม่มีค่า'", "ไม่มีความแตกต่าง", "null เป็นประเภทข้อมูล, undefined เป็นฟังก์ชัน"],
-        answer: "null เป็นการกำหนดค่าที่เป็น 'ไม่มีค่า', undefined หมายถึง 'ไม่กำหนดค่า'"
+        question: "คำถาม 8: การใช้ `let` ต่างจาก `var` อย่างไร?",
+        options: ["`let` มีขอบเขตบล็อก (block scope) ในขณะที่ `var` มีขอบเขตฟังก์ชัน (function scope)", "`let` ใช้สำหรับการประกาศค่าคงที่", "`var` สามารถใช้ในบล็อก (block) ได้เช่นเดียวกับ `let`", "`var` ถูกแนะนำให้ใช้แทน `let`"],
+        answer: "`let` มีขอบเขตบล็อก (block scope) ในขณะที่ `var` มีขอบเขตฟังก์ชัน (function scope)"
     },
     {
-        question: "คำถาม 9: ฟังก์ชัน `setTimeout` ทำงานอย่างไร?",
-        options: ["รันฟังก์ชันหลังจากเวลาที่กำหนด", "รันฟังก์ชันทันที", "ตั้งเวลาการทำงานของฟังก์ชัน", "หยุดการทำงานของฟังก์ชัน"],
-        answer: "รันฟังก์ชันหลังจากเวลาที่กำหนด"
+        question: "คำถาม 9: ฟังก์ชัน `setTimeout` ใช้สำหรับอะไร?",
+        options: ["ตั้งเวลาที่จะทำงานฟังก์ชันหลังจากช่วงเวลาที่กำหนด", "กำหนดเวลาหมดอายุของตัวแปร", "เปลี่ยนเวลาของระบบ", "หน่วงเวลาการเรียกใช้งานฟังก์ชัน"],
+        answer: "ตั้งเวลาที่จะทำงานฟังก์ชันหลังจากช่วงเวลาที่กำหนด"
     },
     {
-        question: "คำถาม 10: ผลลัพธ์ของโค้ดด้านล่างนี้คืออะไร? console.log(1 + '1');",
-        options: ["2", "11", "'2'", "'11'"],
-        answer: "'11'"
+        question: "คำถาม 10: การใช้ `async` และ `await` ใน JavaScript ใช้เพื่ออะไร?",
+        options: ["จัดการกับฟังก์ชันที่ทำงานแบบอะซิงโครนัส (asynchronous)", "ทำให้ฟังก์ชันทำงานเร็วขึ้น", "สร้างฟังก์ชันใหม่ที่สามารถรอการทำงานแบบซิงโครนัส (synchronous)", "ทำให้โค้ดทำงานแบบซิงโครนัส"],
+        answer: "จัดการกับฟังก์ชันที่ทำงานแบบอะซิงโครนัส (asynchronous)"
     }
 ];
 
@@ -167,6 +168,7 @@ const quizData = (function() {
     } else if (path.includes('JAVASCRIPT-TEST.html')) {
         return JavaScriptQuizData;
     }
+    return []; // ป้องกันกรณีไม่มีข้อมูล
 })();
 
 const quizContainer = document.getElementById('quiz');
@@ -174,6 +176,7 @@ const resultContainer = document.getElementById('result');
 const popup = document.getElementById('popup');
 const popupResult = document.getElementById('popup-result');
 
+// ฟังก์ชันการโหลดคำถาม
 function loadQuiz() {
     quizContainer.innerHTML = ''; // เคลียร์คำถามเก่า
     quizData.forEach((quiz, index) => {
@@ -190,12 +193,14 @@ function loadQuiz() {
     });
 }
 
+// ฟังก์ชันการถอดรหัส HTML
 function decodeHtml(html) {
     const txt = document.createElement('textarea');
     txt.innerHTML = html;
     return txt.value;
 }
 
+// ฟังก์ชันการคำนวณคะแนน
 function calculateResult() {
     console.log("Calculating result..."); // Debugging line
     let score = 0;
@@ -211,13 +216,21 @@ function calculateResult() {
     });
 
     // แสดงคะแนนใน Popup
-    popupResult.textContent = `คะแนนของคุณ: ${score}/${quizData.length}`;
+    openPopup(`คะแนนของคุณ: ${score}/${quizData.length}`);
+}
+
+// ฟังก์ชันเปิด Popup
+function openPopup(message) {
+    popupResult.textContent = message;
     popup.style.display = 'block';
 }
+
+// ฟังก์ชันปิด Popup
 function closePopup() {
     popup.style.display = 'none';
 }
 
+// กำหนดอีเวนต์ให้ปุ่ม submit
 document.getElementById('submit').addEventListener('click', calculateResult);
 
 // โหลดคำถามเมื่อเริ่มต้น
