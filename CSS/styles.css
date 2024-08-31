@@ -206,6 +206,7 @@ a {
     width: 300px;
     text-align: center;
     display: none;
+    border-radius: 8px;
 }
 
 #popup-content {
@@ -318,7 +319,7 @@ body.popup-active::before {
 
 .arrow-button {
     font-size: 16px; /* Reduced font size for smaller arrow */
-    padding: 8px 12px; /* Reduced padding for smaller button */
+    padding: 0px 12px; /* Reduced padding for smaller button */
     border: 2px solid rgb(39, 38, 48); /* Border color */
     color: rgb(39, 38, 48); /* Text color */
     background-color: transparent; /* Background color */

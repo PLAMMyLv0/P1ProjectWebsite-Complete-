@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
     <!-- ICON -->
     <link rel="icon" href="../Image/JSICON.png" type="image/png"/>
-    <title>บทเรียน JS</title>
+    <title>บททดสอบ JS</title>
 </head>
 
 <body>
@@ -63,6 +63,12 @@
                 <button id="submit" class="continue-button">ส่งคำตอบ</button>
                 <span id="result"></span>
         </section>
+    </div>
+    <div id="popup" style="display: none;">
+        <div id="popup-content">
+            <span id="popup-result"></span>
+            <button onclick="closePopup()">ปิด</button>
+        </div>
     </div>
     <script>
         document.getElementById('change-content-btn').addEventListener('click', function() {
