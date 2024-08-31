@@ -291,10 +291,7 @@ body.popup-active::before {
 #quiz {
     /* ตรวจสอบว่ามีการตั้งค่าใดๆ ที่อาจทำให้ไม่เห็นเนื้อหา */
     display: block; /* ทำให้แน่ใจว่า #quiz ถูกแสดง */
-    padding: 20px;
-    background: #fff;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: visible; /* ตรวจสอบให้แน่ใจว่าเนื้อหาทั้งหมดแสดง */
 }
 
@@ -304,12 +301,8 @@ body.popup-active::before {
 }
 
 .quiz-item {
-    background: #f9f9f9;
-    border: 1px solid #ddd;
     padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 9px;
     display: block; /* ตรวจสอบให้แน่ใจว่าแสดง */
     visibility: visible; /* ตรวจสอบให้แน่ใจว่าไม่ซ่อน */
 }
