@@ -10,7 +10,7 @@
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
     <!-- ICON -->
-    <link rel="icon" href="../Image/JSICON.png" type="image/png"/>
+    <link rel="icon" href="../Image/JSICON.png" type="image/png" />
     <title>บทเรียน JS</title>
 </head>
 
@@ -30,20 +30,20 @@
                 <h3>บทเรียนที่ 1: การเริ่มต้นกับ HTML</h3>
                 <p>เรียนรู้พื้นฐานของ HTML และการสร้างโครงสร้างของหน้าเว็บ.</p>
                 <a href="LearnHTML.html" class="continue-button-html">เรียนรู้เพิ่มเติม</a>
-                <a href="../HTML/HTML-TEST.html"  class="continue-button" style="margin-left: 70px;">ทำแบบทดสอบ</a>
+                <a href="../HTML/HTML-TEST.html" class="continue-button" style="margin-left: 70px;">ทำแบบทดสอบ</a>
             </div>
 
             <div class="lesson-card">
                 <h3>บทเรียนที่ 2: การออกแบบด้วย CSS</h3>
                 <p>ศึกษาวิธีการใช้ CSS เพื่อจัดการกับสไตล์ของเว็บ.</p>
                 <a href="LearnCSS.html" class="continue-button-css">เรียนรู้เพิ่มเติม</a>
-                <a href="../HTML/CSS-TEST.html"  class="continue-button" style="margin-left: 70px;">ทำแบบทดสอบ</a>
+                <a href="../HTML/CSS-TEST.html" class="continue-button" style="margin-left: 70px;">ทำแบบทดสอบ</a>
             </div>
 
             <div class="lesson-card">
                 <h3>บทเรียนที่ 3: การทำงานกับ JavaScript</h3>
                 <p>เข้าใจพื้นฐานของ JavaScript และวิธีใช้เพื่อปรับปรุงประสบการณ์ผู้ใช้บนเว็บไซต์.</p>
-                <a href="LearnJAVASCRIPT.html" class="continue-button-js">เรียนรู้เพิ่มเติม</a>
+                <a href="../HTML/JAVASCRIPT-TEST.html" class="continue-button" style="margin-left: 251px;">ทำแบบทดสอบ</a>
             </div>
             <div class="lesson-card">
                 <a href="Index.html" class="continue-button" style="margin-left: 30%;">หน้าหลัก</a>
@@ -51,25 +51,40 @@
         </section>
     </div>
     <div class="content-right" style="left: 700px;">
-        <!-- ส่วนของบททดสอบ -->
+        <!-- ส่วนของเนื้อหา -->
         <section class="quiz-container ">
             <div class="lesson-card-right">
-                <!-- Right Arrow Button -->
-                <button id="change-content-btn" class="arrow-button left-arrow">&larr;<h5>เนื้อหา</h5></button>
-                <h2>บททดสอบ</h2>
-                <div id="quiz">
-                    <!-- คำถามจะถูกแทรกโดย JavaScript -->
+                <button id="change-content-btn" class="arrow-button right-arrow">&rarr;<h5>ทำแบบทดสอบ</h5></button>
+                <h2>เนื้อหา JavaScript</h2>
+                <div>
+                    <h4>let x = 10;</h4> กำหนดตัวแปร x และตั้งค่าเป็น 10
+                    <br>
+                    <h4>const PI = 3.14;</h4> กำหนดค่าคงที่ PI เท่ากับ 3.14
+                    <br>
+                    <h4>function greet(name) { return 'Hello, ' + name; }</h4> นิยามฟังก์ชันที่คืนค่าทักทาย
+                    <br>
+                    <h4>if (x > 5) { console.log('x is greater than 5'); }</h4> ตรวจสอบค่าของ x และพิมพ์ข้อความหาก x
+                    มากกว่า 5
+                    <br>
+                    <h4>for (let i = 0; i &lt; 5; i++) { console.log(i); }</h4> ใช้ลูป for เพื่อลูปจาก 0 ถึง 4
+                    <br>
+                    <h4>let array = [1, 2, 3];</h4> สร้างอาร์เรย์ที่มีค่าตัวเลข 1, 2, และ 3
+                    <br>
+                    <h4>array.push(4);</h4> เพิ่มค่า 4 ไปที่ตอนท้ายของอาร์เรย์
+                    <br>
+                    <h4>console.log(array);</h4> พิมพ์ค่าอาร์เรย์ไปที่คอนโซล
+                    <br>
+                    <h4>document.getElementById('myElement').innerText = 'Hello';</h4> เปลี่ยนข้อความขององค์ประกอบที่มี
+                    ID 'myElement' เป็น 'Hello'
                 </div>
-                <button id="submit" class="continue-button">ส่งคำตอบ</button>
-                <span id="result"></span>
         </section>
     </div>
     <script>
-        document.getElementById('change-content-btn').addEventListener('click', function() {
-            window.location.href = 'LearnJAVASCRIPT.html';
+        document.getElementById('change-content-btn').addEventListener('click', function () {
+            window.location.href = 'JAVASCRIPT-TEST.html';
         });
     </script>
-    <script src="../Javascript/Quiz.js"></script>
+    <script src="../Javascript/Content.js"></script>
 </body>
 
 </html>

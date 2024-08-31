@@ -10,8 +10,8 @@
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
     <!-- ICON -->
-    <link rel="icon" href="../Image/HTMLICON.png" type="image/png"/>
-    <title>บทเรียน HTML</title>
+    <link rel="icon" href="../Image/CSSICON.png" type="image/png" />
+    <title>บทเรียน CSS</title>
 </head>
 
 <body>
@@ -23,27 +23,27 @@
     </div>
 
     <div class="content-container">
-        <!-- ส่วนของบทเรียนออนไลน์ -->
+        <!-- ส่วนของเนื้อหา -->
         <section class="lesson-container">
             <h2>บทเรียนออนไลน์</h2>
             <div class="lesson-card">
                 <h3>บทเรียนที่ 1: การเริ่มต้นกับ HTML</h3>
                 <p>เรียนรู้พื้นฐานของ HTML และการสร้างโครงสร้างของหน้าเว็บ.</p>
                 <a href="LearnHTML.html" class="continue-button-html">เรียนรู้เพิ่มเติม</a>
+                <a href="../HTML/HTML-TEST.html" class="continue-button" style="margin-left: 70px;">ทำแบบทดสอบ</a>
             </div>
 
             <div class="lesson-card">
                 <h3>บทเรียนที่ 2: การออกแบบด้วย CSS</h3>
                 <p>ศึกษาวิธีการใช้ CSS เพื่อจัดการกับสไตล์ของเว็บ.</p>
-                <a href="LearnCSS.html" class="continue-button-css">เรียนรู้เพิ่มเติม</a>
-                <a href="../HTML/CSS-TEST.html"  class="continue-button" style="margin-left: 70px;">ทำแบบทดสอบ</a>
+                <a href="../HTML/CSS-TEST.html" class="continue-button" style="margin-left: 251px;">ทำแบบทดสอบ</a>
             </div>
 
             <div class="lesson-card">
                 <h3>บทเรียนที่ 3: การทำงานกับ JavaScript</h3>
                 <p>เข้าใจพื้นฐานของ JavaScript และวิธีใช้เพื่อปรับปรุงประสบการณ์ผู้ใช้บนเว็บไซต์.</p>
                 <a href="LearnJAVASCRIPT.html" class="continue-button-js">เรียนรู้เพิ่มเติม</a>
-                <a href="../HTML/JAVASCRIPT-TEST.html"  class="continue-button" style="margin-left: 70px;">ทำแบบทดสอบ</a>
+                <a href="../HTML/JAVASCRIPT-TEST.html" class="continue-button" style="margin-left: 70px;">ทำแบบทดสอบ</a>
             </div>
             <div class="lesson-card">
                 <a href="Index.html" class="continue-button" style="margin-left: 30%;">หน้าหลัก</a>
@@ -54,28 +54,33 @@
         <!-- ส่วนของบททดสอบ -->
         <section class="quiz-container ">
             <div class="lesson-card-right">
-                <!-- Right Arrow Button -->
-                <button id="change-content-btn" class="arrow-button left-arrow">&larr;<h5>เนื้อหา</h5></button>
-                <h2>บททดสอบ</h2>
-                <div id="quiz">
-                    <!-- คำถามจะถูกแทรกโดย JavaScript -->
+                <button id="change-content-btn" class="arrow-button right-arrow">&rarr;<h5>ทำแบบทดสอบ</h5></button>
+                <h2>เนื้อหา CSS</h2>
+                <h2 style="left: 50px;"> CSS เบื้องต้น </h2>
+                <div>
+                    <h4>body { font-family: Arial, sans-serif; }</h4>กำหนดฟอนต์ของข้อความในเว็บเพจ
+                    <br>
+                    <h4>h1 { color: blue; }</h4> เปลี่ยนสีข้อความของหัวเรื่อง h1 เป็นสีน้ำเงิน
+                    <br>
+                    <h4>p { margin: 10px; }</h4> กำหนดระยะห่างรอบข้อความในแท็ก p
+                    <br>
+                    <h4>.container { width: 80%; margin: auto; }</h4> ตั้งค่าความกว้างและการจัดกลางของ div class
+                    "container"
+                    <br>
+                    <h4>.button { background-color: #4CAF50; color: white; padding: 10px 20px; border: none;border-radius:5px; }</h4> สไตล์ปุ่ม
+                    <br>
+                    <h4>a { text-decoration: none; color: #007BFF; }</h4> เปลี่ยนสีและลบขีดเส้นใต้ของลิงก์
+                    <br>
+                    <h4>img { max-width: 100%; height: auto; }</h4> ปรับขนาดของภาพให้พอดีกับพื้นที่
                 </div>
-                <button id="submit" class="continue-button">ส่งคำตอบ</button>
-                <span id="result"></span>
         </section>
-    </div>
-    <div id="popup" style="display: none;">
-        <div id="popup-content">
-            <span id="popup-result"></span>
-            <button onclick="closePopup()">ปิด</button>
-        </div>
     </div>
     <script>
         document.getElementById('change-content-btn').addEventListener('click', function() {
-            window.location.href = 'LearnHTML.html';
+            window.location.href = 'CSS-TEST.html';
         });
     </script>
-    <script src="../Javascript/Quiz.js"></script>
+    <script src="../Javascript/Content.js"></script>
 </body>
 
 </html>

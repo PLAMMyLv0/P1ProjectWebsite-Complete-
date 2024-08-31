@@ -23,26 +23,26 @@
     </div>
 
     <div class="content-container">
-        <!-- *ส่วนของบทเรียนออนไลน์* -->
+        <!-- ส่วนของบทเรียนออนไลน์ -->
         <section class="lesson-container">
             <h2>บทเรียนออนไลน์</h2>
             <div class="lesson-card">
                 <h3>บทเรียนที่ 1: การเริ่มต้นกับ HTML</h3>
                 <p>เรียนรู้พื้นฐานของ HTML และการสร้างโครงสร้างของหน้าเว็บ.</p>
-                <a href="https://www.w3schools.com/html/" target="_blank" class="continue-button">เรียนรู้เพิ่มเติม</a>
+                <a href="LearnCSS.html" class="continue-button-html">เรียนรู้เพิ่มเติม</a>
                 <a href="../HTML/HTML-TEST.html"  class="continue-button" style="margin-left: 70px;">ทำแบบทดสอบ</a>
             </div>
 
             <div class="lesson-card">
                 <h3>บทเรียนที่ 2: การออกแบบด้วย CSS</h3>
                 <p>ศึกษาวิธีการใช้ CSS เพื่อจัดการกับสไตล์ของเว็บ.</p>
-                <a href="https://www.w3schools.com/css/" target="_blank" class="continue-button">เรียนรู้เพิ่มเติม</a>
+                <a href="LearnCSS.html" class="continue-button-css">เรียนรู้เพิ่มเติม</a>
             </div>
 
             <div class="lesson-card">
                 <h3>บทเรียนที่ 3: การทำงานกับ JavaScript</h3>
                 <p>เข้าใจพื้นฐานของ JavaScript และวิธีใช้เพื่อปรับปรุงประสบการณ์ผู้ใช้บนเว็บไซต์.</p>
-                <a href="https://www.w3schools.com/js/" target="_blank" class="continue-button">เรียนรู้เพิ่มเติม</a>
+                <a href="LearnJAVASCRIPT.html" class="continue-button-js">เรียนรู้เพิ่มเติม</a>
                 <a href="../HTML/JAVASCRIPT-TEST.html"  class="continue-button" style="margin-left: 70px;">ทำแบบทดสอบ</a>
             </div>
             <div class="lesson-card">
@@ -54,6 +54,8 @@
         <!-- ส่วนของบททดสอบ -->
         <section class="quiz-container ">
             <div class="lesson-card-right">
+                <!-- Right Arrow Button -->
+                <button id="change-content-btn" class="arrow-button left-arrow">&larr;<h5>เนื้อหา</h5></button>
                 <h2>บททดสอบ</h2>
                 <div id="quiz">
                     <!-- คำถามจะถูกแทรกโดย JavaScript -->
@@ -62,6 +64,11 @@
                 <span id="result"></span>
         </section>
     </div>
+    <script>
+        document.getElementById('change-content-btn').addEventListener('click', function() {
+            window.location.href = 'LearnCSS.html';
+        });
+    </script>
     <script src="../Javascript/Quiz.js"></script>
 </body>
 

@@ -197,6 +197,7 @@ function decodeHtml(html) {
 }
 
 function calculateResult() {
+    console.log("Calculating result..."); // Debugging line
     let score = 0;
     quizData.forEach((quiz, index) => {
         const selectedOption = document.querySelector(`input[name="question${index}"]:checked`);
@@ -213,7 +214,6 @@ function calculateResult() {
     popupResult.textContent = `คะแนนของคุณ: ${score}/${quizData.length}`;
     popup.style.display = 'block';
 }
-
 function closePopup() {
     popup.style.display = 'none';
 }
@@ -222,37 +222,3 @@ document.getElementById('submit').addEventListener('click', calculateResult);
 
 // โหลดคำถามเมื่อเริ่มต้น
 loadQuiz();
-
-
-// const quizContainer = document.getElementById('quiz');
-// const resultContainer = document.getElementById('result');
-
-// function loadQuiz() {
-//     quizData.forEach((quiz, index) => {
-//         const questionElement = document.createElement('div');
-//         questionElement.classList.add('quiz-item');
-//         questionElement.innerHTML = `
-//             <h3>${quiz.question}</h3>
-//             ${quiz.options.map((option, i) => `
-//                 <input type="radio" name="question${index}" id="q${index}o${i}" value="${option}">
-//                 <label for="q${index}o${i}">${option}</label><br>
-//             `).join('')}
-//         `;
-//         quizContainer.appendChild(questionElement);
-//     });
-// }
-
-// function calculateResult() {
-//     let score = 0;
-//     quizData.forEach((quiz, index) => {
-//         const selectedOption = document.querySelector(`input[name="question${index}"]:checked`);
-//         if (selectedOption && selectedOption.value === quiz.answer) {
-//             score++;
-//         }
-//     });
-//     resultContainer.innerHTML = `คะแนนของคุณ: ${score}/${quizData.length}`;
-// }
-
-// document.getElementById('submit').addEventListener('click', calculateResult);
-
-// loadQuiz();
