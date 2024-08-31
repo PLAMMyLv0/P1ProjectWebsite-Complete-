@@ -61,8 +61,6 @@ a {
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    max-width: 90vw; /* กำหนดความกว้างสูงสุดของกล่อง */
-    max-height: 90vh; /* กำหนดความสูงสูงสุดของกล่อง */
     background: rgba(255, 255, 255, 0.8);
     border-radius: 16px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -73,6 +71,9 @@ a {
     left: 0; /* ตั้งค่าตำแหน่งด้านซ้าย */
     margin: 50px; /* เพิ่มระยะห่างจากขอบของหน้าจอ */
     box-sizing: border-box; /* ทำให้ padding รวมอยู่ในความกว้างและความสูงของกล่อง */
+    max-width: 100vw; /* หรือค่าอื่นที่เหมาะสม */
+    max-height: 100vh; /* หรือค่าอื่นที่เหมาะสม */
+    overflow: auto; /* ทำให้สามารถเลื่อนเนื้อหาได้ถ้าจำเป็น */
 }
 
 /**/

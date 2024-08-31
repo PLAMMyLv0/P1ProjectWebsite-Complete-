@@ -207,6 +207,7 @@ a {
     text-align: center;
     display: none;
     border-radius: 8px;
+    z-index: 1000; /* ควรมีค่าให้สูงกว่าค่าที่ใช้ใน overlay */
 }
 
 #popup-content {
@@ -287,10 +288,21 @@ body.popup-active::before {
     position: relative; /* เพื่อให้ปุ่มสามารถถูกจัดตำแหน่งภายในกล่องนี้ได้ */
 }
 
+#quiz {
+    /* ตรวจสอบว่ามีการตั้งค่าใดๆ ที่อาจทำให้ไม่เห็นเนื้อหา */
+    display: block; /* ทำให้แน่ใจว่า #quiz ถูกแสดง */
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: visible; /* ตรวจสอบให้แน่ใจว่าเนื้อหาทั้งหมดแสดง */
+}
+
 .quiz-container {
     position: relative; /* ตั้งให้ quiz-container เป็น relative */
     padding: 20px; /* เพิ่ม padding เพื่อให้มีพื้นที่รอบๆ */
 }
+
 
 #submit {
     position: absolute; /* ใช้ absolute เพื่อให้สามารถกำหนดตำแหน่งแบบอิสระได้ */
